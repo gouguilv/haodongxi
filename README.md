@@ -48,7 +48,7 @@ text
 
 bash
 python "来玩石头剪刀布.py"
-方法二：使用打包后的可执行文件（无需Python）
+### 方法二：使用打包后的可执行文件（无需python）
 从 Releases 页面下载最新版本的 guessfist.exe，双击即可运行。
 
 游戏操作说明
