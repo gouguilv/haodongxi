@@ -1,4 +1,5 @@
-&lt;!DOCTYPE html&gt;
+
+html_content = '''&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -152,4 +153,9 @@
         }
     &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;
+&lt;/html&gt;'''
+
+with open('/workspace/guessfist.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("English version saved successfully!")
