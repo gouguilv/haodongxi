@@ -313,7 +313,7 @@
                     resultClass = 'lose';
                     computerScore++;
                 }
-                resultDetail = `你出了 ${emojis[playerChoice]}，电脑出了 ${emojis[computerChoice]}`;
+                resultDetail = '你出了 ' + emojis[playerChoice] + '，电脑出了 ' + emojis[computerChoice];
             } else {
                 if (playerChoice === '石头') {
                     computerChoice = '布';
@@ -328,7 +328,7 @@
                 rounds++;
                 
                 const trollMessages = [
-                    `电脑叔叔出了个${emojis[computerChoice]}，气不气？`,
+                    '电脑叔叔出了个' + emojis[computerChoice] + '，气不气？',
                     '哈哈哈，菜！',
                     '就这？',
                     '太菜了！',
@@ -337,16 +337,15 @@
                 resultDetail = trollMessages[Math.floor(Math.random() * trollMessages.length)];
                 
                 if (rounds % 3 === 0) {
-                    setTimeout(() =&gt; {
-                        alert(`输了${rounds}局了，要不要再选一次，弟弟？`);
+                    setTimeout(function() {
+                        alert('输了' + rounds + '局了，要不要再选一次，弟弟？');
                     }, 500);
                 }
             }
 
-            document.getElementById('result').innerHTML = `
-                &lt;div class="result-text ${resultClass}"&gt;${resultText}&lt;/div&gt;
-                &lt;div class="result-detail"&gt;${resultDetail}&lt;/div&gt;
-            `;
+            document.getElementById('result').innerHTML = 
+                '&lt;div class="result-text ' + resultClass + '"&gt;' + resultText + '&lt;/div&gt;' +
+                '&lt;div class="result-detail"&gt;' + resultDetail + '&lt;/div&gt;';
             updateScore();
         }
 
