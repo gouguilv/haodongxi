@@ -1,4 +1,6 @@
-&lt;!DOCTYPE html&gt;
+
+# -*- coding: utf-8 -*-
+html_content = '''&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -151,4 +153,9 @@
         }
     &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;
+&lt;/html&gt;'''
+
+with open('/workspace/guessfist.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("File saved successfully with UTF-8 encoding!")
